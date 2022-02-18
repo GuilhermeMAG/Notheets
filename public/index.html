@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Teste de backend de uma integração Notion com o Google Sheets">
+    <meta name="keywords" content="BackEnd, Test, Frontend, Integração, Integration, Notion, Google Sheets, Node, Javascript">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Guilherme Casagrande">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="images/icon.png">
+    <title>Notion > Sheets</title>
+</head>
+
+<body onload="setTimeout('Atualizar()', 600000)">
+    <header>
+        <h1><strong>Notheets </strong>by: Guilherme Casagrande</h1>
+        <h3>Integration Notion with Google Sheets</h3>
+        <div id="controls">
+            <button onclick="Atualizar()"> Refresh </button>
+        </div>
+    </header>
+    <main>
+        <div id="loading">
+            <img src="./images/loading.gif" alt="Loading">
+        </div>
+        <div class="flex-container">
+            <div id="comprasEl"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div id="produtosEl"></div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

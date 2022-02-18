@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 10px;
+    background-color: #ffffff;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    color: #0b0729;
+}
+
+header>h1 {
+    font-weight: 100;
+}
+
+#loading {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#loading img {
+    height: inherit;
+    width: inherit;
+}
+
+
+/* Containers */
+
+.flex-container {
+    height: 490px;
+    overflow: scroll;
+    margin-top: -100px;
+}
+
+.container {
+    height: 490px;
+    overflow: scroll;
+}
+
+#comprasEl {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#produtosEl {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Compras */
+
+.compras {
+    margin: 10px 10px;
+    padding: 10px 20px;
+    background: #3dbe77;
+    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    align-self: baseline;
+    min-width: 364.28;
+    min-height: 207.38;
+}
+
+.compras h3 {
+    font-size: 25px;
+    padding: 5px;
+    color: #0b0729;
+}
+
+.compras h3:hover {
+    background-color: #305476;
+    color: #ddd;
+    border-radius: 5px;
+}
+
+.compras li {
+    margin: 5px 0;
+    color: #0b0729;
+}
+
+.compras .tags {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.compras .tags:hover {
+    background-color: #305476;
+    color: #ddd;
+    border-radius: 5px;
+}
+
+
+/* Controles */
+
+button {
+    margin: 15px;
+    padding: 15px 25px;
+    background: #3dbe77;
+    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-size: large;
+    color: #ffffff;
+}
+
+button:hover {
+    background-color: #25ff87;
+    font-size: larger;
+    color: #0b0729;
+}
+
+
+/* Produtos */
+
+.produtos {
+    margin: 10px 10px;
+    padding: 10px 20px;
+    background: #3dabbe;
+    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    min-width: 364.28px;
+    min-height: 207.38px;
+}
+
+.produtos h3 {
+    font-size: 25px;
+    padding: 5px;
+    color: #0b0729;
+}
+
+.produtos h3:hover {
+    background-color: #305476;
+    color: #ddd;
+    border-radius: 5px;
+}
+
+.produtos li {
+    margin: 5px 0;
+    color: #0b0729;
+}
+
+.produtos .tags {
+    margin-top: 1px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
