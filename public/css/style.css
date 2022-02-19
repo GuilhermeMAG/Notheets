@@ -30,7 +30,7 @@ header>h1 {
     height: 100px;
     width: 100px;
     position: relative;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -71,15 +71,29 @@ header>h1 {
 
 /* Compras */
 
+.headerCompras h1 {
+    color: #0b0729;
+    text-align: center;
+}
+
+.headerCompras h1:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
 .compras {
     margin: 10px 10px;
     padding: 10px 20px;
     background: #3dbe77;
-    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.404);
+    border-radius: 15px;
     align-self: baseline;
-    min-width: 364.28;
-    min-height: 207.38;
+    min-width: 372.45px;
+}
+
+.compras:hover {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .compras h3 {
@@ -92,6 +106,7 @@ header>h1 {
     background-color: #305476;
     color: #ddd;
     border-radius: 5px;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.404);
 }
 
 .compras li {
@@ -117,7 +132,6 @@ header>h1 {
 button {
     margin: 15px;
     padding: 15px 25px;
-    background: #3dbe77;
     box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     font-size: large;
@@ -125,22 +139,107 @@ button {
 }
 
 button:hover {
-    background-color: #25ff87;
     font-size: larger;
     color: #0b0729;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+/* Custom Button */
+
+.button {
+    background: linear-gradient(0deg, rgb(5, 199, 102) 0%, rgb(12, 165, 192) 100%);
+    line-height: 42px;
+    border: none;
+}
+
+.button span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.button:before,
+.button:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: #3dbe77;
+    box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, .9), -4px -4px 5px 0px rgba(255, 255, 255, .9), 7px 7px 20px 0px rgba(0, 0, 0, .2), 4px 4px 5px 0px rgba(0, 0, 0, .3);
+    transition: all 0.3s ease;
+}
+
+.button:before {
+    height: 0%;
+    width: 2px;
+}
+
+.button:after {
+    width: 0%;
+    height: 2px;
+}
+
+.button:hover {
+    color: #3dbe77;
+    background: transparent;
+}
+
+.button:hover:before {
+    height: 100%;
+}
+
+.button:hover:after {
+    width: 100%;
+}
+
+.button span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.button span:after {
+    height: 2px;
+    width: 0%;
+}
+
+.button span:hover:before {
+    height: 100%;
+}
+
+.button span:hover:after {
+    width: 100%;
 }
 
 
 /* Produtos */
 
+.headerProdutos h1 {
+    color: #0b0729;
+    text-align: center;
+    margin-top: 25px;
+    margin: 15px;
+}
+
+.headerProdutos h1:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
 .produtos {
     margin: 10px 10px;
     padding: 10px 20px;
     background: #3dabbe;
-    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    min-width: 364.28px;
-    min-height: 207.38px;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.404);
+    border-radius: 15px;
+    min-width: 372.45px;
+}
+
+.produtos:hover {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .produtos h3 {
@@ -153,6 +252,7 @@ button:hover {
     background-color: #305476;
     color: #ddd;
     border-radius: 5px;
+    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.404);
 }
 
 .produtos li {

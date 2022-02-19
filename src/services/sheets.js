@@ -39,7 +39,7 @@ function coletar() {
         });
 }
 
-//coletar()
+coletar()
 
 function ProdutoDe(Descricao) {
     axios.get(`https: //sheetdb.io/api/v1/b0mh027fqr3xx/search?'Descrição'=${Descricao}`, {
@@ -56,7 +56,7 @@ function ProdutoDe(Descricao) {
         });
 }
 
-//ProdutoDe("Cadeira")
+ProdutoDe("Cadeira")
 
 function atualizarProduto(Descricao, Produto) {
     axios.patch(`https://sheetdb.io/api/v1/b0mh027fqr3xx/Descrição/${Descricao}`, {
@@ -74,4 +74,4 @@ function atualizarProduto(Descricao, Produto) {
         });
 }
 
-//atualizarProduto("Cadeira", "Produto 1")
+atualizarProduto("Cadeira", "Produto 1")

@@ -20,7 +20,8 @@
         <h1><strong>Notheets </strong>by: Guilherme Casagrande</h1>
         <h3>Integration Notion with Google Sheets</h3>
         <div id="controls">
-            <button onclick="Atualizar()"> Refresh </button>
+            <!-- <button onclick="Atualizar()"> Refresh </button> -->
+            <button onclick="Atualizar()" class="button"><span>Refresh</span></button>
         </div>
     </header>
     <main>
@@ -28,10 +29,17 @@
             <img src="./images/loading.gif" alt="Loading">
         </div>
         <div class="flex-container">
-            <div id="comprasEl"></div>
+            <div class="headerCompras">
+                <h1>COMPRAS</h1>
+            </div>
+            <div id="comprasEl">
+            </div>
         </div>
     </main>
     <footer>
+        <div class="headerProdutos">
+            <h1>PRODUTOS</h1>
+        </div>
         <div class="container">
             <div id="produtosEl"></div>
         </div>
