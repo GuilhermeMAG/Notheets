@@ -13,7 +13,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     margin: 10px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
+    background: linear-gradient(0deg, rgb(5, 199, 102) 0%, rgb(12, 165, 192) 100%);
     color: #fff;
 }
 
@@ -44,14 +45,14 @@ header>h1 {
 /* Containers */
 
 .flex-container {
-    height: 490px;
-    overflow: scroll;
+    height: 500px;
+    overflow: hidden scroll;
     margin-top: -100px;
 }
 
 .container {
-    height: 490px;
-    overflow: scroll;
+    height: 500px;
+    overflow: hidden scroll;
 }
 
 #comprasEl {
@@ -183,7 +184,6 @@ button:hover {
 }
 
 .button:hover {
-    color: #3dbe77;
     background: transparent;
 }
 
@@ -219,7 +219,7 @@ button:hover {
 .headerProdutos h1 {
     color: #0b0729;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 20px;
     margin: 15px;
 }
 
