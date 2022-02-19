@@ -17,5 +17,11 @@ Integração automática de tabelas e planilhas do Notion para o Google Sheets c
 ## Dark
 <img src="assets_readme/notheets_dark.jpg"/>
 
+## Desktop1
+<img src="assets_readme/notheets3.jpg"/>
+
+## Mobile1
+<img src="assets_readme/notheets4.jpg"/>
+
 
 #### Em desenvolvimento

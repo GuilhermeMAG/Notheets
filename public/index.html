@@ -17,17 +17,18 @@
 
 <body onload="setTimeout('Atualizar()', 600000)">
     <header>
-        <h1><strong>Notheets </strong>by: Guilherme Casagrande</h1>
+        <h1><strong>Notheets </strong></h1>
         <h3>Integration Notion with Google Sheets</h3>
         <div id="controls">
             <!-- <button onclick="Atualizar()"> Refresh </button> -->
             <button onclick="Atualizar()" class="button"><span>Refresh</span></button>
         </div>
-    </header>
-    <main>
         <div id="loading">
             <img src="./images/loading.gif" alt="Loading">
         </div>
+    </header>
+    <main>
+
         <div class="flex-container">
             <div class="headerCompras">
                 <h1>COMPRAS</h1>
@@ -43,6 +44,7 @@
         <div class="container">
             <div id="produtosEl"></div>
         </div>
+        <p><strong>By: </strong>Guilherme Casagrande</p>
     </footer>
     <script src="js/script.js"></script>
 </body>
