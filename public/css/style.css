@@ -18,6 +18,9 @@ body {
     color: #fff;
 }
 
+
+/*--------------------------------------- Header */
+
 header {
     text-align: center;
     color: #0b0729;
@@ -25,106 +28,6 @@ header {
 
 header>h1 {
     font-weight: 100;
-}
-
-#loading {
-    height: 100px;
-    width: 100px;
-    position: relative;
-    top: 5rem;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#loading img {
-    height: inherit;
-    width: inherit;
-}
-
-
-/* Containers */
-
-.flex-container {
-    height: 500px;
-    overflow: hidden scroll;
-    margin-top: -100px;
-}
-
-.container {
-    height: 500px;
-    overflow: hidden scroll;
-}
-
-#comprasEl {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-#produtosEl {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* Compras */
-
-.headerCompras h1 {
-    color: #0b0729;
-    text-align: center;
-}
-
-.headerCompras h1:hover {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-.compras {
-    margin: 10px 10px;
-    padding: 10px 20px;
-    background: #3dbe77;
-    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.404);
-    border-radius: 15px;
-    align-self: baseline;
-    min-width: 372.45px;
-}
-
-.compras:hover {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-.compras h3 {
-    font-size: 25px;
-    padding: 5px;
-    color: #0b0729;
-}
-
-.compras h3:hover {
-    background-color: #305476;
-    color: #ddd;
-    border-radius: 5px;
-    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.404);
-}
-
-.compras li {
-    margin: 5px 0;
-    color: #0b0729;
-}
-
-.compras .tags {
-    margin-top: 10px;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.compras .tags:hover {
-    background-color: #305476;
-    color: #ddd;
-    border-radius: 5px;
 }
 
 
@@ -214,13 +117,124 @@ button:hover {
 }
 
 
+/* Loading */
+
+#loading {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#loading img {
+    height: inherit;
+    width: inherit;
+}
+
+
+/* ---------------------------------------Main */
+
+
+/* Containers */
+
+.flex-container {
+    height: 500px;
+    overflow: hidden scroll;
+    margin-top: -100px;
+}
+
+#comprasEl {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Compras */
+
+.headerCompras h1 {
+    color: #0b0729;
+    text-align: center;
+}
+
+.headerCompras h1:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.compras {
+    margin: 5px 5px;
+    padding: 10px 20px;
+    background: #3dbe77;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.404);
+    border-radius: 15px;
+    align-self: baseline;
+    min-width: 372.45px;
+}
+
+.compras:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.compras h3 {
+    font-size: 25px;
+    padding: 5px;
+    color: #0b0729;
+}
+
+.compras h3:hover {
+    background-color: #305476;
+    color: #ddd;
+    border-radius: 5px;
+    box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.404);
+}
+
+.compras li {
+    margin: 5px 0;
+    color: #0b0729;
+}
+
+.compras .tags {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.compras .tags:hover {
+    background-color: #305476;
+    color: #ddd;
+    border-radius: 5px;
+}
+
+
+/* ---------------------------------------Footer */
+
+
+/* Containers */
+
+.container {
+    height: 500px;
+    overflow: hidden scroll;
+}
+
+#produtosEl {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /* Produtos */
 
 .headerProdutos h1 {
     color: #0b0729;
     text-align: center;
-    margin-top: 20px;
-    margin: 15px;
+    margin: 10px;
 }
 
 .headerProdutos h1:hover {
@@ -229,10 +243,10 @@ button:hover {
 }
 
 .produtos {
-    margin: 10px 10px;
+    margin: 5px 5px;
     padding: 10px 20px;
     background: #3dabbe;
-    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.404);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.404);
     border-radius: 15px;
     min-width: 372.45px;
 }
@@ -252,7 +266,7 @@ button:hover {
     background-color: #305476;
     color: #ddd;
     border-radius: 5px;
-    box-shadow: 3px 5px 3px rgba(0, 0, 0, 0.404);
+    box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.404);
 }
 
 .produtos li {
@@ -265,9 +279,6 @@ button:hover {
     padding: 5px 10px;
     border-radius: 5px;
 }
-
-
-/* Footer */
 
 p {
     text-align: end;
