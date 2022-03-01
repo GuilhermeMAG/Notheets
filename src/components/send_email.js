@@ -1,5 +1,5 @@
 const sgMail = require('@sendgrid/mail')
-sgMail.setApiKey(process.env.SENDGRID_KEY)
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 // const msg = {
 //     to: 'g.casagrande@uni9.edu.br', // Change to your recipient

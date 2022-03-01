@@ -1,5 +1,5 @@
 const dotenv = require('dotenv').config()
-const getCompras = require('./compras_notion');
+const getCompras = require('../services/compras_notion');
 var axios = require("axios");
 
 function salvar(ID, DateBuy, DateShipping, DateFinish, Description) {

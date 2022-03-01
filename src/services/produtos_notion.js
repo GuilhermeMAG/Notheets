@@ -1,6 +1,5 @@
 const dotenv = require('dotenv').config()
 const { Client } = require('@notionhq/client')
-const senderEmail = require('./send_email')
 
 const notion = new Client({
     auth: process.env.NOTION_API_KEY,
@@ -28,5 +27,3 @@ module.exports = async function getProdutos() {
     })
     return produtos
 };
-
-// senderEmail('Status do Estoque', `Estoque do Produto`, `<strong> Estoque do produto em estado Crítico </strong>`)

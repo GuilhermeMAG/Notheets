@@ -3,10 +3,10 @@ const dotenv = require("dotenv")
 const sendgridMail = require("@sendgrid/mail")
 
 dotenv.config()
-sendgridMail.setApiKey(process.env.SENDGRID_KEY)
+sendgridMail.setApiKey(process.env.SENDGRID_API_KEY)
 const notion = new Client({ auth: process.env.NOTION_API_KEY })
 
-const databaseId = process.env.NOTION_DATABASE_ID_PRODUTOS
+const database_id = process.env.NOTION_DATABASE_ID_PRODUTOS
 
 /**
  * Local map to store task pageId to its last status.
@@ -60,7 +60,7 @@ async function getTasksFromNotionDatabase() {
 
     while (true) {
         const { results, next_cursor } = await notion.databases.query({
-            database_id: databaseId,
+            database_id: database_id,
             start_cursor: cursor,
         })
         pages.push(...results)
@@ -102,7 +102,7 @@ function findUpdatedTasks(currentTasks) {
  * @param {{ status: string, title: string }} task
  */
 async function sendUpdateEmailWithSendgrid({ title, status }) {
-    const message = `Status of Notion task ("${title}") has been updated to "${status}".`
+    const message = `Estoque do: ("${title}") foi alterado para "${status}".`
     console.log(message)
 
     try {
@@ -110,7 +110,7 @@ async function sendUpdateEmailWithSendgrid({ title, status }) {
         await sendgridMail.send({
             to: process.env.EMAIL_TO_FIELD,
             from: process.env.EMAIL_FROM_FIELD,
-            subject: "Notion Task Status Updated",
+            subject: "Notion Inventory Updated",
             text: message,
         })
         console.log("Email Sent")

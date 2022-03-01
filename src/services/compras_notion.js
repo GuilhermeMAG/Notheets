@@ -1,11 +1,11 @@
 const dotenv = require("dotenv").config();
 const { Client } = require("@notionhq/client");
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
-const database_id = process.env.NOTION_DATABASE_ID_COMPRAS;
+const database_id_compras = process.env.NOTION_DATABASE_ID_COMPRAS;
 
 module.exports = async function getCompras() {
     const payload = {
-        path: `databases/${database_id}/query`,
+        path: `databases/${database_id_compras}/query`,
         method: "POST",
     };
 
