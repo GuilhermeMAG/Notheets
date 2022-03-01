@@ -15,7 +15,7 @@ Integração automática de tabelas e planilhas do Notion para o Google Sheets c
 <img src="assets_readme/email_status_inventory.jpg"/>
 
 ## Inventory Updates
-<img src="assets_readme/email_status_inventory.jpg"/>
+<img src="assets_readme/monitor_inventory.jpg"/>
 
 ## Dark
 <img src="assets_readme/notheets_dark.jpg"/>
