@@ -1,0 +1,80 @@
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "nome": "California",
+    "status": "🔆🔆🔆"
+}
+
+###
+
+GET http://localhost:5000/products
+
+###
+
+GET http://localhost:5000/produtos
+
+###
+
+GET http://localhost:5000/compras
+
+###
+GET http://localhost:5000/products/97c5a706-5867-42f2-b36f-32191b7a7ca5
+
+###
+
+PUT http://localhost:5000/products/74873a42-4b28-4ff5-9305-edf2f31c3344
+Content-Type: application/json
+
+{
+    "nome": "Yurts in Big Sur, California",
+    "status": "🔆🔆🔆"
+}
+
+###
+
+DELETE http://localhost:5000/products/aeb11c96-484d-463d-b0ae-de43317c3bf3
+
+###
+
+
+
+###
+
+POST http://localhost:5000/purchases
+Content-Type: application/json
+
+{
+    "ID_da_compra": "00073",
+    "Descricao": "Periféricos 2"
+}
+
+###
+
+GET http://localhost:5000/purchases
+
+###
+
+GET http://localhost:5000/produtos
+
+###
+
+GET http://localhost:5000/compras
+
+###
+GET http://localhost:5000/purchases/a29b3931-1257-4aa0-8c49-b010c32b8aaa
+###
+
+PUT http://localhost:5000/purchases/a29b3931-1257-4aa0-8c49-b010c32b8aaa
+Content-Type: application/json
+
+{
+    "ID_da_compra": "00073",
+    "Descricao": "PC Gamer de entrada"
+}
+
+###
+
+DELETE http://localhost:5000/purchases/a29b3931-1257-4aa0-8c49-b010c32b8aaa
+
+###

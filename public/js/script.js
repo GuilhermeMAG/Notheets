@@ -3,6 +3,7 @@ const loadingEl = document.querySelector('#loading')
 const produtosEl = document.querySelector('#produtosEl')
 let loading = false
 
+//Compras
 const getComprasFromBack = async() => {
     loading = true
     const res = await fetch('http://localhost:5000/compras')
@@ -31,8 +32,8 @@ const addComprasToDom = async() => {
         comprasEl.appendChild(div)
     })
 }
-
 addComprasToDom()
+
 
 
 //Refresh

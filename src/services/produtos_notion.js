@@ -1,5 +1,6 @@
 const dotenv = require('dotenv').config()
 const { Client } = require('@notionhq/client')
+const senderEmail = require('./send_email')
 
 const notion = new Client({
     auth: process.env.NOTION_API_KEY,
@@ -17,7 +18,7 @@ module.exports = async function getProdutos() {
 
     const produtos = results.map((page) => {
         //Console.Log para ajudar a inserir campos
-        //console.log(page.properties.Name.title[0].text.content)
+        //console.log(page.properties.Status.formula.string)
         return {
             nome: page.properties.Name.title[0].text.content,
             estoqueMin: page.properties.Min_Required.number,
@@ -27,3 +28,5 @@ module.exports = async function getProdutos() {
     })
     return produtos
 };
+
+// senderEmail('Status do Estoque', `Estoque do Produto`, `<strong> Estoque do produto em estado Crítico </strong>`)
