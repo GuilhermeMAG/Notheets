@@ -1,3 +1,5 @@
+const dotenv = require("dotenv").config();
+const PORT = process.env.PORT || 5000;
 const comprasEl = document.querySelector('#comprasEl')
 const loadingEl = document.querySelector('#loading')
 const produtosEl = document.querySelector('#produtosEl')
