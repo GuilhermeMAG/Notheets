@@ -76,7 +76,7 @@ function atualizarProduto(Descricao, Produto) {
 
 // atualizarProduto("Cadeira", "Produto 1")
 
-const sendComprasToSheets = async() => {
+const sendPurshasesToSheets = async() => {
     const compras = await getCompras()
     compras.forEach(compras => {
         axios.post('http://localhost:5001',
@@ -86,4 +86,14 @@ const sendComprasToSheets = async() => {
         })
     })
 }
-sendComprasToSheets()
+sendPurshasesToSheets()
+
+// const compras = getCompras();
+
+// function axiosSender(data) {
+//     axios.post('http://localhost:5001', data).then(response => {
+//         console.log(response.data)
+//     })
+// }
+
+// axiosSender()
