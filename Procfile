@@ -1,2 +1,2 @@
 web: npm start
-node: ./src/services/notion_trigger.js
+node: node ./src/services/notion_trigger.js
