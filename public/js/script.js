@@ -6,7 +6,7 @@ let loading = false
 //Compras
 const getComprasFromBack = async() => {
     loading = true
-    const res = await fetch('http://localhost:5000/compras')
+    const res = await fetch('https://codemag.herokuapp.com/compras')
     const data = await res.json()
     loading = false
     return data
