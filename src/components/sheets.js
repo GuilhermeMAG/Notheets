@@ -20,10 +20,10 @@ function salvar(ID, DateBuy, DateShipping, DateFinish, Description) {
         console.log(response.data)
     })
 }
-const compras = getCompras()
-    // salvar('66', '43989', '43991', 'June 12, 2020', 'Cadeira')
-    // salvar(compras)
-    // console.log(compras)
+
+// salvar('66', '43989', '43991', 'June 12, 2020', 'Cadeira')
+// salvar(compras)
+// console.log(compras)
 
 
 function coletar() {
@@ -75,3 +75,33 @@ function atualizarProduto(Descricao, Produto) {
 }
 
 // atualizarProduto("Cadeira", "Produto 1")
+
+const sendComprasToSheets = async() => {
+    const compras = await getCompras()
+    const {
+        Descricao,
+        ID_da_compra,
+        Data_da_compra,
+        Data_do_envio,
+        Data_estimada_de_entrega
+    } = compras
+    compras.forEach(compras => {
+        axios.post('https://sheetdb.io/api/v1/ten2d58oeocj8', {
+            "data": {
+                "ID da compra": `${ID_da_compra}`,
+                "Data da compra": `${Data_da_compra}`,
+                "Data do envio": `${Data_do_envio}`,
+                "Data estimada de entrega": `${Data_estimada_de_entrega}`,
+                "Descrição": `${Descricao}`,
+            }
+        }, {
+            "auth": {
+                "username": process.env.USER_NAME1,
+                "password": process.env.PASSWORD1
+            }
+        }).then(response => {
+            console.log(response.data)
+        })
+    })
+}
+sendComprasToSheets()

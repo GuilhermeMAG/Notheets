@@ -19,7 +19,7 @@ GET http://localhost:5000/produtos
 GET http://localhost:5000/compras
 
 ###
-GET http://localhost:5000/products/97c5a706-5867-42f2-b36f-32191b7a7ca5
+GET http://localhost:5000/products/3fb55ce8-a90b-4dcc-b114-de592254b0a7
 
 ###
 
@@ -77,4 +77,17 @@ Content-Type: application/json
 
 DELETE http://localhost:5000/purchases/a29b3931-1257-4aa0-8c49-b010c32b8aaa
 
+###
+
+POST http://localhost:5001/
+Content-Type: application/json
+
+{
+    "id": "edb7a11e-c5bc-40b0-b292-8b9f5ff466d7",
+    "Descricao": "Periféricos 3",
+    "ID_da_compra": "00074",
+    "Data_da_compra": "2020-06-09",
+    "Data_do_envio": "2020-06-10",
+    "Data_estimada_de_entrega": "2020-06-12"
+}
 ###

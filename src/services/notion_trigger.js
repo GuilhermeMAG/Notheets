@@ -1,11 +1,9 @@
 const { Client } = require("@notionhq/client")
 const dotenv = require("dotenv")
 const sendgridMail = require("@sendgrid/mail")
-
 dotenv.config()
 sendgridMail.setApiKey(process.env.SENDGRID_API_KEY)
 const notion = new Client({ auth: process.env.NOTION_API_KEY })
-
 const database_id = process.env.NOTION_DATABASE_ID_PRODUTOS
 
 /**
