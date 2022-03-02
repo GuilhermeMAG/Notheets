@@ -78,28 +78,10 @@ function atualizarProduto(Descricao, Produto) {
 
 const sendComprasToSheets = async() => {
     const compras = await getCompras()
-    const {
-        Descricao,
-        ID_da_compra,
-        Data_da_compra,
-        Data_do_envio,
-        Data_estimada_de_entrega
-    } = compras
     compras.forEach(compras => {
-        axios.post('https://sheetdb.io/api/v1/ten2d58oeocj8', {
-            "data": {
-                "ID da compra": `${ID_da_compra}`,
-                "Data da compra": `${Data_da_compra}`,
-                "Data do envio": `${Data_do_envio}`,
-                "Data estimada de entrega": `${Data_estimada_de_entrega}`,
-                "Descrição": `${Descricao}`,
-            }
-        }, {
-            "auth": {
-                "username": process.env.USER_NAME1,
-                "password": process.env.PASSWORD1
-            }
-        }).then(response => {
+        axios.post('http://localhost:5001',
+            compras
+        ).then(response => {
             console.log(response.data)
         })
     })
