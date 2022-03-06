@@ -22,7 +22,7 @@ function salvar(ID, DateBuy, DateShipping, DateFinish, Description) {
 }
 
 // salvar('66', '43989', '43991', 'June 12, 2020', 'Cadeira')
-// salvar(compras)
+// salvar()
 // console.log(compras)
 
 
@@ -76,7 +76,7 @@ function atualizarProduto(Descricao, Produto) {
 
 // atualizarProduto("Cadeira", "Produto 1")
 
-const sendPurshasesToSheets = async() => {
+async function sendPurshasesToSheets() {
     const compras = await getCompras()
     compras.forEach(compras => {
         axios.post('http://localhost:5001',
@@ -88,12 +88,21 @@ const sendPurshasesToSheets = async() => {
 }
 sendPurshasesToSheets()
 
-// const compras = getCompras();
+// const sendPurshasesToSheets = async() => {
+//     const compras = await getCompras()
+//     compras.forEach(compras => {
+//         axios.post('http://localhost:5001',
+//             compras
+//         ).then(response => {
+//             console.log(response.data)
+//         })
+//     })
+// }
+// sendPurshasesToSheets()
 
 // function axiosSender(data) {
 //     axios.post('http://localhost:5001', data).then(response => {
 //         console.log(response.data)
 //     })
 // }
-
-// axiosSender()
+// axiosSender(compra)
