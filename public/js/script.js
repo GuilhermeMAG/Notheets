@@ -45,7 +45,7 @@ function Atualizar() {
 //Produtos
 const getProdutosFromBack = async() => {
     loading = true
-    const res = await fetch('https://codemag.herokuapp.com/produtos')
+    const res = await fetch('https://notheets.herokuapp.com/produtos')
     const data = await res.json()
     loading = false
     return data
