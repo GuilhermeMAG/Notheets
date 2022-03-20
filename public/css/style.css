@@ -195,6 +195,7 @@ header>h1 {
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.404);
     border-radius: 15px;
     align-self: baseline;
+    min-width: 350px;
     max-width: 350px;
 }
 
@@ -283,6 +284,7 @@ header>h1 {
     background: #3dabbe;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.404);
     border-radius: 15px;
+    min-width: 350px;
     max-width: 350px;
 }
 
