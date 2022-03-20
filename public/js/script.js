@@ -6,6 +6,7 @@ let loading = false
 //Compras
 const getPurshasesFromBack = async() => {
     loading = true
+    const res = await fetch('https://notheets.herokuapp.com/compras')
     const data = await res.json()
     loading = false
     return data
@@ -20,7 +21,11 @@ const addPurshasesToDom = async() => {
         const div = document.createElement('div')
         div.className = 'purshases'
         div.innerHTML = `
+            <div class="headerPurshasesCards">
             <h3>${purshases.ID_da_compra}</h3>
+            <button class="editCardButton" style="font-size:40px" onclick="document.location='../cards.html',saveId(${purshases.ID_da_compra})">
+            <i class="fa fa-edit"></i></button>
+            </div>
             <ul>
             <li><strong>Descrição: </strong>${purshases.Descricao}</li>
             <li><strong>Data da Compra: </strong>${purshases.Data_da_compra}</li>
@@ -41,6 +46,7 @@ function Atualizar() {
 //Produtos
 const getProductsFromBack = async() => {
     loading = true
+    const res = await fetch('https://notheets.herokuapp.com/produtos')
     const data = await res.json()
     loading = false
     return data
@@ -67,3 +73,7 @@ const addProductsToDom = async() => {
     })
 }
 addProductsToDom()
+
+function saveId(string) {
+    sessionStorage.id = string
+}
