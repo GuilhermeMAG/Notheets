@@ -6,7 +6,7 @@ let loading = false
 //Compras
 const getPurshasesFromBack = async() => {
     loading = true
-    const res = await fetch('http://localhost:5000/compras')
+    const res = await fetch('https://notheets.herokuapp.com/compras')
     const data = await res.json()
     loading = false
     return data
@@ -42,7 +42,7 @@ function Atualizar() {
 //Produtos
 const getProductsFromBack = async() => {
     loading = true
-    const res = await fetch('http://localhost:5000/produtos')
+    const res = await fetch('https://notheets.herokuapp.com/produtos')
     const data = await res.json()
     loading = false
     return data
