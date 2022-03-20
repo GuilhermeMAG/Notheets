@@ -10,9 +10,9 @@ app.use(express.static("public"), express.json());
 
 // Compras 
 
-app.get("/compras", async(req, res) => {
+app.get("/compras", async(request, response) => {
     const compras = await getCompras();
-    return res.json(compras);
+    return response.json(compras);
 });
 
 let purchases = [];
@@ -30,10 +30,19 @@ app.route('/purchases')
         return response.json(purchases);
     })
     .post((request, response) => {
-        const { ID_da_compra, Descricao } = request.body;
+        const {
+            ID_da_compra,
+            Descricao,
+            Data_da_compra,
+            Data_do_envio,
+            Data_estimada_de_entrega
+        } = request.body;
         const purchase = {
             ID_da_compra,
             Descricao,
+            Data_da_compra,
+            Data_do_envio,
+            Data_estimada_de_entrega,
             id: randomUUID(),
         };
         purchases.push(purchase);
@@ -81,11 +90,17 @@ function createPurchaseFile() {
     });
 }
 
+app.get("/compras/:id", async(request, response) => {
+    const { id } = request.params;
+    const purchase = purchases.find((purchase) => purchase.ID_da_compra === id);
+    return response.json(purchase);
+});
+
 // Produtos
 
-app.get("/produtos", async(req, res) => {
+app.get("/produtos", async(request, response) => {
     const produtos = await getProdutos();
-    return res.json(produtos);
+    return response.json(produtos);
 });
 
 let products = [];
