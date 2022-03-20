@@ -12,10 +12,10 @@ module.exports = async function getCompras() {
     const { results } = await notion.request(payload);
 
     const compras = results.map((page) => {
-        // console.log(page.properties.Descricao.rich_text[0]);
+        // console.log(page.properties.Descricao.formula.string);
         return {
             id: page.id,
-            Descricao: page.properties.Descricao.rich_text[0].text.content,
+            Descricao: page.properties.Descricao.formula.string,
             ID_da_compra: page.properties.ID_da_compra.title[0].text.content,
             Data_da_compra: page.properties.Data_da_compra.date.start,
             Data_do_envio: page.properties.Data_do_envio.date.start,
