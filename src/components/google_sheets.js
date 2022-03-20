@@ -36,11 +36,11 @@ app.post("/", async(req, res) => {
     });
 
     // Write row(s) to spreadsheet
-    await googleSheets.spreadsheets.values.append({
+    const writeRows = await googleSheets.spreadsheets.values.append({
         auth,
         spreadsheetId,
         range: "Sheet1!A:H",
-        valueInputOption: "USER_ENTERED",
+        valueInputOption: "Add_Rows",
         resource: {
             values: [
                 [ID_da_compra, id, , Data_da_compra, Data_do_envio, Data_estimada_de_entrega, , Descricao]
@@ -51,5 +51,4 @@ app.post("/", async(req, res) => {
     res.send("Successfully submitted! Thank you!");
 });
 
-// app.listen(1337, (req, res) => console.log("running on 1337"));
 app.listen(PORT, console.log(`Server started on http://localhost:${PORT}`));

@@ -15,13 +15,20 @@
     <title>Notion > Sheets</title>
 </head>
 
-<body onload="setTimeout('Atualizar()', 600000)">
+<body onload="setTimeout('Atualizar()', 60*1000)">
     <header>
-        <h1><strong>Notheets </strong></h1>
-        <h3>Integration Notion with Google Sheets</h3>
+        <h1>
+            <strong> Notheets
+            </strong>
+        </h1>
+        <h3> Integration Notion with Google Sheets
+        </h3>
         <div id="controls">
-            <!-- <button onclick="Atualizar()"> Refresh </button> -->
-            <button onclick="Atualizar()" class="button"><span>Refresh</span></button>
+            <button onclick="Atualizar()" class="button">
+                    <span>
+                        Refresh
+                    </span>
+                </button>
         </div>
         <div id="loading">
             <img src="./images/loading.gif" alt="Loading">
@@ -29,21 +36,30 @@
     </header>
     <main>
         <div class="flex-container">
-            <div class="headerCompras">
-                <h1>COMPRAS</h1>
+            <div class="headerPurshases">
+                <h1>
+                    COMPRAS
+                </h1>
             </div>
-            <div id="comprasEl">
+            <div id="purshasesEl">
             </div>
         </div>
     </main>
     <footer>
-        <div class="headerProdutos">
-            <h1>PRODUTOS</h1>
+        <div class="headerProducts">
+            <h1>
+                PRODUTOS
+            </h1>
         </div>
         <div class="container">
-            <div id="produtosEl"></div>
+            <div id="productsEl">
+            </div>
         </div>
-        <p><strong>By: </strong>Guilherme Casagrande</p>
+        <p>
+            <strong>
+                By:
+            </strong> Guilherme Casagrande
+        </p>
     </footer>
     <script src="js/script.js"></script>
 </body>

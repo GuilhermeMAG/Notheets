@@ -77,16 +77,28 @@ function atualizarProduto(Descricao, Produto) {
 // atualizarProduto("Cadeira", "Produto 1")
 
 async function sendPurshasesToSheets() {
-    const compras = await getCompras()
-    compras.forEach(compras => {
-        axios.post('http://localhost:5001',
-            compras
-        ).then(response => {
-            console.log(response.data)
-        })
-    })
+    const compras = await getCompras();
+    var i = compras.length
+    console.log(i)
+    while (i >= 1) {
+        const myInterval = setInterval(axiosSender, 2000);
+        i--;
+        axiosSender(i)
+        if (i = 0) {
+            clearInterval(myInterval);
+        }
+    }
+    console.log(i)
+        // compras.forEach(compras => {
+        //     axios.post('http://localhost:5001',
+        //         compras
+        //     ).then(response => {
+        //         console.log(response.data)
+        //     })
+        // })
 }
 sendPurshasesToSheets()
+
 
 // const sendPurshasesToSheets = async() => {
 //     const compras = await getCompras()
@@ -100,9 +112,12 @@ sendPurshasesToSheets()
 // }
 // sendPurshasesToSheets()
 
-// function axiosSender(data) {
-//     axios.post('http://localhost:5001', data).then(response => {
-//         console.log(response.data)
-//     })
-// }
+async function axiosSender(i) {
+    const compras = await getCompras();
+    axios.post('http://localhost:5001',
+        compras[i]
+    ).then(response => {
+        console.log(response.data)
+    })
+}
 // axiosSender(compra)

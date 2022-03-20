@@ -1,75 +1,71 @@
-const comprasEl = document.querySelector('#comprasEl')
 const loadingEl = document.querySelector('#loading')
-const produtosEl = document.querySelector('#produtosEl')
+const purshasesEl = document.querySelector('#purshasesEl')
+const productsEl = document.querySelector('#productsEl')
 let loading = false
 
 //Compras
-const getComprasFromBack = async() => {
+const getPurshasesFromBack = async() => {
     loading = true
-    const res = await fetch('https://codemag.herokuapp.com/compras')
+    const res = await fetch('http://localhost:5000/compras')
     const data = await res.json()
     loading = false
     return data
 }
 
-const addComprasToDom = async() => {
-    const compras = await getComprasFromBack()
+const addPurshasesToDom = async() => {
+    const purshases = await getPurshasesFromBack()
     if (!loading) {
         loadingEl.innerHTML = ''
     }
-    compras.forEach(compras => {
+    purshases.forEach(purshases => {
         const div = document.createElement('div')
-        div.className = 'compras'
+        div.className = 'purshases'
         div.innerHTML = `
-        <h3>${compras.ID_da_compra}</h3>
-        <ul>
-        <li><strong>Descrição: </strong>${compras.Descricao}</li>
-        <li><strong>Data da Compra: </strong>${compras.Data_da_compra}</li>
-        <li><strong>Data do Envio: </strong>${compras.Data_do_envio}</li>
-        </ul>
-        <div class="tags"><strong>Data estimada de entrega: </strong>${compras.Data_estimada_de_entrega}</div>
-        `
-        comprasEl.appendChild(div)
+            <h3>${purshases.ID_da_compra}</h3>
+            <ul>
+            <li><strong>Descrição: </strong>${purshases.Descricao}</li>
+            <li><strong>Data da Compra: </strong>${purshases.Data_da_compra}</li>
+            <li><strong>Data do Envio: </strong>${purshases.Data_do_envio}</li>
+            </ul>
+            <div class="tags"><strong>Data estimada de entrega: </strong>${purshases.Data_estimada_de_entrega}</div>
+            `
+        purshasesEl.appendChild(div)
     })
 }
-addComprasToDom()
-
-
+addPurshasesToDom()
 
 //Refresh
 function Atualizar() {
     window.location.reload();
 }
 
-
 //Produtos
-const getProdutosFromBack = async() => {
+const getProductsFromBack = async() => {
     loading = true
-    const res = await fetch('https://codemag.herokuapp.com/produtos')
+    const res = await fetch('http://localhost:5000/produtos')
     const data = await res.json()
     loading = false
     return data
 }
 
-const addProdutosToDom = async() => {
-    const produtos = await getProdutosFromBack()
+const addProductsToDom = async() => {
+    const products = await getProductsFromBack()
     if (!loading) {
         loadingEl.innerHTML = ''
     }
-    produtos.forEach(produtos => {
+    products.forEach(products => {
         const div = document.createElement('div')
-        div.className = 'produtos'
+        div.className = 'products'
         div.innerHTML = `
-        <h3></strong>${produtos.nome}</h3>
-        <ul>
-        <li><strong>Descrição: </strong>${produtos.nome}</li>
-        <li><strong>Estoque Atual: </strong>${produtos.estoqueAtual}</li>
-        <li><strong>Estoque Minímo: </strong>${produtos.estoqueMin}</li>
-        </ul>
-        <div class="tags"><a><strong>Status: </strong>${produtos.status}</a></div>
-        `
-        produtosEl.appendChild(div)
+            <h3></strong>${products.nome}</h3>
+            <ul>
+            <li><strong>Descrição: </strong>${products.nome}</li>
+            <li><strong>Estoque Atual: </strong>${products.estoqueAtual}</li>
+            <li><strong>Estoque Minímo: </strong>${products.estoqueMin}</li>
+            </ul>
+            <div class="tags"><a><strong>Status: </strong>${products.status}</a></div>
+            `
+        productsEl.appendChild(div)
     })
 }
-
-addProdutosToDom();
+addProductsToDom()

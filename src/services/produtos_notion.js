@@ -12,7 +12,6 @@ module.exports = async function getProdutos() {
     const { results } = await notion.request(payload)
 
     const produtos = results.map((page) => {
-        //Console.Log para ajudar a inserir campos
         //console.log(page.properties.Status.formula.string)
         return {
             nome: page.properties.Name.title[0].text.content,

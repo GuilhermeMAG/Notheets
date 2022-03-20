@@ -145,7 +145,7 @@ button:hover {
     margin-top: -100px;
 }
 
-#comprasEl {
+#purshasesEl {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -153,19 +153,19 @@ button:hover {
 }
 
 
-/* Compras */
+/* Purshases */
 
-.headerCompras h1 {
+.headerPurshases h1 {
     color: #0b0729;
     text-align: center;
 }
 
-.headerCompras h1:hover {
+.headerPurshases h1:hover {
     opacity: 1;
     transform: scale(1.1);
 }
 
-.compras {
+.purshases {
     margin: 5px 5px;
     padding: 10px 20px;
     background: #3dbe77;
@@ -175,36 +175,36 @@ button:hover {
     min-width: 372.45px;
 }
 
-.compras:hover {
+.purshases:hover {
     opacity: 1;
     transform: scale(1.1);
 }
 
-.compras h3 {
+.purshases h3 {
     font-size: 25px;
     padding: 5px;
     color: #0b0729;
 }
 
-.compras h3:hover {
+.purshases h3:hover {
     background-color: #305476;
     color: #ddd;
     border-radius: 5px;
     box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.404);
 }
 
-.compras li {
+.purshases li {
     margin: 5px 0;
     color: #0b0729;
 }
 
-.compras .tags {
+.purshases .tags {
     margin-top: 10px;
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-.compras .tags:hover {
+.purshases .tags:hover {
     background-color: #305476;
     color: #ddd;
     border-radius: 5px;
@@ -219,9 +219,10 @@ button:hover {
 .container {
     height: 500px;
     overflow: hidden scroll;
+    padding: 10px;
 }
 
-#produtosEl {
+#productsEl {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -229,20 +230,20 @@ button:hover {
 }
 
 
-/* Produtos */
+/* Products */
 
-.headerProdutos h1 {
+.headerProducts h1 {
     color: #0b0729;
     text-align: center;
     margin: 10px;
 }
 
-.headerProdutos h1:hover {
+.headerProducts h1:hover {
     opacity: 1;
     transform: scale(1.1);
 }
 
-.produtos {
+.products {
     margin: 5px 5px;
     padding: 10px 20px;
     background: #3dabbe;
@@ -251,30 +252,30 @@ button:hover {
     min-width: 372.45px;
 }
 
-.produtos:hover {
+.products:hover {
     opacity: 1;
     transform: scale(1.1);
 }
 
-.produtos h3 {
+.products h3 {
     font-size: 25px;
     padding: 5px;
     color: #0b0729;
 }
 
-.produtos h3:hover {
+.products h3:hover {
     background-color: #305476;
     color: #ddd;
     border-radius: 5px;
     box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.404);
 }
 
-.produtos li {
+.products li {
     margin: 5px 0;
     color: #0b0729;
 }
 
-.produtos .tags {
+.products .tags {
     margin-top: 1px;
     padding: 5px 10px;
     border-radius: 5px;
