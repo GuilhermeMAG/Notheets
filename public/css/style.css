@@ -33,7 +33,7 @@ header>h1 {
 
 /* Controles */
 
-button {
+.refreshButton {
     margin: 15px;
     padding: 15px 25px;
     box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.1);
@@ -42,7 +42,7 @@ button {
     color: #ffffff;
 }
 
-button:hover {
+.refreshButton:hover {
     font-size: larger;
     color: #0b0729;
     opacity: 1;
@@ -50,23 +50,23 @@ button:hover {
 }
 
 
-/* Custom Button */
+/* Custom .refreshButton */
 
-.button {
+.refreshButton {
     background: linear-gradient(0deg, rgb(5, 199, 102) 0%, rgb(12, 165, 192) 100%);
     line-height: 42px;
     border: none;
 }
 
-.button span {
+.refreshButton span {
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.button:before,
-.button:after {
+.refreshButton:before,
+.refreshButton:after {
     position: absolute;
     content: "";
     right: 0;
@@ -76,43 +76,43 @@ button:hover {
     transition: all 0.3s ease;
 }
 
-.button:before {
+.refreshButton:before {
     height: 0%;
     width: 2px;
 }
 
-.button:after {
+.refreshButton:after {
     width: 0%;
     height: 2px;
 }
 
-.button:hover {
+.refreshButton:hover {
     background: transparent;
 }
 
-.button:hover:before {
+.refreshButton:hover:before {
     height: 100%;
 }
 
-.button:hover:after {
+.refreshButton:hover:after {
     width: 100%;
 }
 
-.button span:before {
+.refreshButton span:before {
     width: 2px;
     height: 0%;
 }
 
-.button span:after {
+.refreshButton span:after {
     height: 2px;
     width: 0%;
 }
 
-.button span:hover:before {
+.refreshButton span:hover:before {
     height: 100%;
 }
 
-.button span:hover:after {
+.refreshButton span:hover:after {
     width: 100%;
 }
 
@@ -172,15 +172,30 @@ button:hover {
     transform: scale(1.1);
 }
 
+.headerPurshasesCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.headerPurshasesCards .editCardButton {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+}
+
+.editCardButton :hover {
+    opacity: 1;
+    transform: scale(1.4);
+}
+
 .purshases {
     margin: 5px 5px;
-    padding: 10px 20px;
+    padding: 10px 10px;
     background: #3dbe77;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.404);
     border-radius: 15px;
     align-self: baseline;
-    min-width: 350px;
-    max-width: 370px;
+    width: 350px;
 }
 
 .purshases:hover {
@@ -195,10 +210,8 @@ button:hover {
 }
 
 .purshases h3:hover {
-    background-color: #305476;
-    color: #ddd;
-    border-radius: 5px;
-    box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.404);
+    opacity: 1;
+    transform: scale(1.2);
 }
 
 .purshases li {
@@ -270,8 +283,7 @@ button:hover {
     background: #3dabbe;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.404);
     border-radius: 15px;
-    min-width: 350px;
-    max-width: 370px;
+    width: 350px;
 }
 
 .products:hover {
@@ -301,6 +313,13 @@ button:hover {
     margin-top: 1px;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+.products .tags:hover {
+    padding-left: 90px;
+    transition: transform 0.9s;
+    opacity: 1;
+    transform: scale(1.3);
 }
 
 p {
