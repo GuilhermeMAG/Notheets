@@ -204,13 +204,18 @@ button:hover {
 .purshases li {
     margin: 5px 0;
     color: #0b0729;
+    overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
 }
 
 .purshases .tags {
     margin-top: 10px;
-    padding: 5px 10px;
+    padding: 0px 5px 0px 5px;
     border-radius: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .purshases .tags:hover {
@@ -265,7 +270,8 @@ button:hover {
     background: #3dabbe;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.404);
     border-radius: 15px;
-    min-width: 372.45px;
+    min-width: 350px;
+    max-width: 370px;
 }
 
 .products:hover {
