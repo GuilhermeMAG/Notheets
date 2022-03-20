@@ -66,7 +66,7 @@ GET http://localhost:5000/produtos
 GET http://localhost:5000/compras
 
 ###
-GET http://localhost:5000/purchases/a29b3931-1257-4aa0-8c49-b010c32b8aaa
+GET http://localhost:5000/purchases/efaf1b80-4af2-467c-b781-9842cc7f3611
 ###
 
 PUT http://localhost:5000/purchases/a29b3931-1257-4aa0-8c49-b010c32b8aaa
@@ -83,15 +83,20 @@ DELETE http://localhost:5000/purchases/a29b3931-1257-4aa0-8c49-b010c32b8aaa
 
 ###
 
-POST http://localhost:5001/
+POST http://localhost:5000/purchases
 Content-Type: application/json
 
 {
-    "id": "edb7a11e-c5bc-40b0-b292-8b9f5ff466d7",
-    "Descricao": "Periféricos 3",
-    "ID_da_compra": "00074",
+    "ID_da_compra": "00072",
+    "Descricao": "Produto 1, Produto 4",
     "Data_da_compra": "2020-06-09",
     "Data_do_envio": "2020-06-10",
-    "Data_estimada_de_entrega": "2020-06-12"
+    "Data_estimada_de_entrega": "2020-06-13"
 }
 ###
+
+GET http://localhost:5000/purchases
+
+###
+
+GET http://localhost:5000/compras/00080
