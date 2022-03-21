@@ -8,7 +8,7 @@ document.getElementById("compra").innerHTML = ID;
 
 //Compras
 const getPurshaseFromBack = async() => {
-    const response = await fetch(`http://localhost:5000/compras/000${ID}`)
+    const response = await fetch(`https://notheets.herokuapp.com/compras/000${ID}`)
     const data = await response.json()
     return data
 }
