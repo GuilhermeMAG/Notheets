@@ -6,10 +6,6 @@
     transition: transform 0.2s;
 }
 
-ul {
-    list-style: none;
-}
-
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
@@ -19,7 +15,7 @@ body {
 }
 
 
-/*--------------------------------------- Header */
+/* Header */
 
 header {
     text-align: center;
@@ -31,7 +27,7 @@ header>h1 {
 }
 
 
-/* Containers */
+/* Container */
 
 #purchaseEl {
     display: flex;
@@ -42,6 +38,32 @@ header>h1 {
 
 
 /* Purchase */
+
+.inputBox {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: inset 1px 1px 10px 0px #000000;
+}
+
+#data_estimada_de_entrega,
+#data_do_envio,
+#data_compra,
+#_descricao {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+}
+
+#_descricao {}
+
+.headerId {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 
 .headerPurchase {
     display: flex;
@@ -63,18 +85,16 @@ header>h1 {
 
 .purshase {
     margin: 5px 5px;
-    padding: 50px 50px;
+    padding: 30px 30px;
     background: #3dbe77;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.404);
     border-radius: 15px;
-    align-self: baseline;
-    height: max-content;
     color: black;
 }
 
 .editCardButton :hover {
     opacity: 1;
-    transform: scale(1.5);
+    transform: scale(1.9);
 }
 
 
@@ -84,8 +104,10 @@ header>h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 20px;
+    margin: 10px;
     padding: 15px;
+    /* box-shadow: inset 1px 1px 15px 0px #000000; */
+    /* border-radius: 10px; */
 }
 
 .controls .editCardButton {
@@ -95,6 +117,13 @@ header>h1 {
 
 
 /* Footer  */
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    padding: 15px;
+}
 
 p {
     text-align: end;
