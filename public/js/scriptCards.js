@@ -9,11 +9,13 @@ document.getElementById("compra").innerHTML = ID;
 //Compras
 const getPurshaseFromBack = async() => {
     const response = await fetch(`http://localhost:5000/compras/000${ID}`)
-    return response
+    const data = await response.json()
+    return data
 }
 
 const addPurshaseToDom = async() => {
-    const purshase = await getPurshaseFromBack();
+    const purshase = await getPurshaseFromBack()
+    console.log(purshase)
     const div = document.createElement('div')
     div.className = 'purshase'
     div.innerHTML = `
