@@ -14,8 +14,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     margin: 10px;
-    /* background: linear-gradient(0deg, rgb(5, 199, 102) 0%, rgb(12, 165, 192) 100%); */
-    background: rgb(192, 74, 74);
+    background: linear-gradient(90deg, rgb(5, 199, 102) 0%, rgb(12, 165, 192) 100%);
     color: #fff;
 }
 
@@ -24,8 +23,7 @@ body {
 
 header {
     text-align: center;
-    color: #0b0729;
-    background: hsl(245, 7%, 70%);
+    color: #fff;
 }
 
 header>h1 {
@@ -35,20 +33,11 @@ header>h1 {
 
 /* Containers */
 
-.flex-container {
-    height: 500px;
-    overflow: hidden scroll;
-    margin-top: -100px;
-    border-radius: 15px;
-    background: rgb(223, 7, 7);
-}
-
 #purchaseEl {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    background: rgb(1, 255, 107);
 }
 
 
@@ -59,19 +48,28 @@ header>h1 {
     flex-direction: row;
     justify-content: space-around;
     margin: 20px;
-    background: rgb(92, 10, 243);
 }
 
 .headerPurchase h1 {
-    color: #0b0729;
+    color: #020202;
     text-align: center;
-    background: rgb(110, 112, 228);
     padding: 5px;
 }
 
 .headerPurchase h1:hover {
     opacity: 1;
     transform: scale(1.1);
+}
+
+.purshase {
+    margin: 5px 5px;
+    padding: 50px 50px;
+    background: #3dbe77;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.404);
+    border-radius: 15px;
+    align-self: baseline;
+    height: max-content;
+    color: black;
 }
 
 .editCardButton :hover {
@@ -88,7 +86,6 @@ header>h1 {
     justify-content: space-around;
     margin: 20px;
     padding: 15px;
-    background: rgb(225, 240, 12);
 }
 
 .controls .editCardButton {
@@ -101,5 +98,4 @@ header>h1 {
 
 p {
     text-align: end;
-    background: rgb(5, 5, 5);
 }
